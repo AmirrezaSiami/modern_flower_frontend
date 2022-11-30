@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'modern_flower_frontend';
+  title = 'Modern 416-Flower Admin';
 }
