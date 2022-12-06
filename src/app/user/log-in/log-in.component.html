@@ -13,7 +13,7 @@
           <small class="text-xs	font-normal block">Modern Admin Panel</small>
         </h1>
 
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmitLoginForm()" >
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmitLoginForm()" class="relative" >
 
           <!-- Email input -->
           <div class="mb-6">
@@ -37,6 +37,8 @@
           <button type="submit" class="btn-rose w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
             Sign in
           </button>
+
+          <ngx-spinner [fullScreen]="false" type="ball-scale-multiple"></ngx-spinner>
 
         </form>
 

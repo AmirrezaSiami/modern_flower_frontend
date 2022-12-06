@@ -4,12 +4,10 @@ import {LogInComponent} from "./user/log-in/log-in.component";
 
 const routes: Routes = [
   {
-    title: "Login",
     path: "",
     component: LogInComponent,
   },
   {
-    title: "Login",
     path: "login",
     component: LogInComponent,
   }

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../shared/services/auth.service";
+import {NgxSpinnerService} from "ngx-spinner";
 
 @Component({
   selector: 'app-log-in',
@@ -15,7 +16,8 @@ export class LogInComponent implements OnInit {
   });
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private spinner: NgxSpinnerService
   ) {
   }
 
@@ -23,12 +25,14 @@ export class LogInComponent implements OnInit {
   }
 
   onSubmitLoginForm() {
-    console.log("-> this.loginForm;", this.loginForm);
     if(this.loginForm.valid){
+      this.spinner.show().then(r => {});
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(next => {
         // debugger
       }, error => {
         // debugger
+      }, () => {
+        this.spinner.hide().then(r => {});
       })
     }
   }
