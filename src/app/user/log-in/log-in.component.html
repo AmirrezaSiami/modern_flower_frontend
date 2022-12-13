@@ -1,0 +1,49 @@
+<section class="h-screen" style="background-color: #fff4ec;">
+  <div class="container px-6 py-12 h-full">
+    <div class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
+
+      <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+        <img src="/assets/flower.gif" class="w-full" alt="Login"/>
+      </div>
+
+      <div class="md:w-8/12 lg:w-5/12 lg:ml-20 max-w-lg">
+
+        <h1 class="font-bold text-center text-3xl mb-8">
+          416 Flowers
+          <small class="text-xs	font-normal block">Modern Admin Panel</small>
+        </h1>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmitLoginForm()" class="relative" >
+
+          <!-- Email input -->
+          <div class="mb-6">
+            <input type="text" class="input-rose" placeholder="Email address" formControlName="email"/>
+          </div>
+
+          <!-- Password input -->
+          <div class="mb-6">
+            <input type="password" class="input-rose" placeholder="Password"  formControlName="password"/>
+          </div>
+
+          <!--          <div class="flex justify-between items-center mb-6">-->
+          <!--            <a-->
+          <!--              href="#!"-->
+          <!--              class="text-black-600 hover:text-black-700 focus:text-black-700 active:text-black-800 duration-200 transition ease-in-out"-->
+          <!--            >Forgot password?</a-->
+          <!--            >-->
+          <!--          </div>-->
+
+          <!-- Submit button -->
+          <button type="submit" class="btn-rose w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
+            Sign in
+          </button>
+
+          <ngx-spinner [fullScreen]="false" type="ball-scale-multiple"></ngx-spinner>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
